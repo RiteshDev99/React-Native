@@ -1,4 +1,4 @@
- import React, { useState } from 'react'; // Import useState here
+import React, { useState } from 'react'; // Import useState here
 import { View, Text, SafeAreaView, StyleSheet, TouchableOpacity } from 'react-native';
 
 const App = () => {
@@ -15,12 +15,12 @@ const App = () => {
   };
 
   const changeColor = () => {
-    setButtonColor( generateRandom() ); // Toggle color
+    setButtonColor(generateRandom()); // Toggle color
   };
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={[styles.main, {backgroundColor: buttonColor}]}>
+      <View style={[styles.main, { backgroundColor: buttonColor }]}>
         <TouchableOpacity
           style={[styles.button, { backgroundColor: btnColor }]} // Apply dynamic background color
           onPress={() => {
@@ -29,9 +29,9 @@ const App = () => {
             BtnFun();
           }}
         >
-        <Text style={styles.text}>CLICK ME</Text>
-      </TouchableOpacity>
-    </View>
+          <Text style={styles.text}>CLICK ME</Text>
+        </TouchableOpacity>
+      </View>
     </SafeAreaView >
   );
 };
